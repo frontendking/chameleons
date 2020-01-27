@@ -4,18 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require esm --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.5",
-    "mocha": "^5.0.5"
-  },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "expect": "^22.4.3",
-    "nyc": "^11.6.0"
+    "mocha": "^5.0.5",
+    "esm": "^3.2.25"
   }
 }

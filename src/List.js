@@ -2,13 +2,15 @@ const listSize = Symbol('listSize')
 const dataStore = Symbol('dataStore')
 const pos = Symbol('pos')
 
-class List {
+export class List {
   constructor(ds = []) {
     this[pos] = ds.length === 0 ? 0 : ds.length - 1
     this[listSize] = ds.length
     this[dataStore] = ds
   }
-
+  listSize() {
+    return this[listSize]
+  }
   toString() {
     return this[dataStore].toString()
   }
@@ -31,7 +33,7 @@ class List {
   }
 
   append(el) {
-    this[dataStore][this[pos]++] = el
+    this[dataStore][this[listSize]++] = el
     return this[dataStore]
   }
 
@@ -88,4 +90,3 @@ class List {
   }
 }
 
-module.exports = List
