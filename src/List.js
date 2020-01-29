@@ -8,8 +8,8 @@ export class List {
     this[listSize] = ds.length
     this[dataStore] = ds
   }
-  listSize() {
-    return this[listSize]
+  dataStore(){
+    return this[dataStore]
   }
   toString() {
     return this[dataStore].toString()
@@ -38,13 +38,13 @@ export class List {
   }
 
   remove(el) {
-    const foundAt = this.find(el)
+    const foundAt = this[dataStore].indexOf(el)
     if (foundAt> -1) {
       this[dataStore].splice(foundAt, 1)
       --this[listSize]
-      return true
+      return this
     }
-    return false
+    return this
   }
 
   length() {

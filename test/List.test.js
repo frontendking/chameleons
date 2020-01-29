@@ -1,15 +1,10 @@
 import { List } from '../src/List'
 import { strict as assert } from 'assert'
 
-
 describe('List', () => {
   let list
-  it('listSize - Number of elements in list', () => {
-    list = new List([1, 2, 3, 4, 5, 6])
-    list.append(7)
-    list.append(8)
-    console.log(list.listSize())
-    assert.equal(1,1)
+  before(()=>{
+    list = new List([])
   })
   it('pos - Index of Current Position in list')
   it('length')
@@ -17,8 +12,16 @@ describe('List', () => {
   it('toString')
   it('getElement')
   it('insert')
-  it('append')
-  it('remove')
+  it('append',()=>{
+    list.append(1)
+    assert.equal(list.toString(), '1')
+  })
+  it('remove', ()=>{
+    assert.deepEqual(list.remove(1).dataStore(), [])
+    list.append(1)
+    list.append(2)
+    assert.deepEqual(list.remove(1).dataStore(), [2])
+  })
   it('front')
   it('end')
   it('prev')
