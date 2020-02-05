@@ -1,13 +1,15 @@
 {
-  "name": "data-structure",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "datastructure",
+  "version": "0.1.0",
+  "description": "data structure",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha --require esm --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "data structure"
+  ],
+  "author": "ilhwan-ryu<ih.ryu.dev@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "esm": "^3.2.25",
