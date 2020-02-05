@@ -1,10 +1,11 @@
 {
-  "name": "datastructure",
+  "name": "chameleons",
   "version": "0.1.0",
   "description": "data structure",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --require esm --watch"
+    "test": "mocha --require esm --watch",
+    "build": "babel src --out-dir dist"
   },
   "keywords": [
     "data structure"
@@ -12,6 +13,13 @@
   "author": "ilhwan-ryu<ih.ryu.dev@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-private-methods": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-preset-minify": "^0.5.1",
+    "core-js": "3",
     "esm": "^3.2.25",
     "mocha": "^7.0.1"
   }

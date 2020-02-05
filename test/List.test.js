@@ -1,4 +1,4 @@
-import { List } from '../src/List'
+import { List } from '../src'
 import { strict as assert } from 'assert'
 describe('List', () => {
   let list
