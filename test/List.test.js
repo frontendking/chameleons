@@ -1,15 +1,11 @@
 import { List } from '../src'
 import { strict as assert } from 'assert'
+
 describe('List', () => {
   let list
   beforeEach(()=>{
     list = new List()
   })
-  it('pos - Index of Current Position in list')
-  it('length')
-  it('clear')
-  it('toString')
-  it('getElement')
   it('insert', ()=>{
     list.append(1, 2, 4).insert(3,4)
     assert.deepEqual(list, new List(1,2,3,4))
