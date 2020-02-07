@@ -13,7 +13,7 @@ describe('Stack', () => {
     })
     it('pop', () => {
       stack = new Stack(1, 2, 3)
-      assert.deepEqual(stack.pop(), 3)
+      assert.deepEqual(stack.pop(), new Stack(1,2))
     })
     it('peek', () => {
       stack = new Stack(1, 2, 3)

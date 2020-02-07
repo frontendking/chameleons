@@ -4,7 +4,8 @@ export class Stack extends Array {
     return this
   }
   pop(...args){
-    return super.pop(...args)
+    super.pop(...args)
+    return this
   }
   peek(...args){
     return this[this.length-1]
