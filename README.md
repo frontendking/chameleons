@@ -1,4 +1,4 @@
 # chameleons
 
-data structure library
+The iterable data structure library with es6
 
