@@ -25,6 +25,7 @@
     "babel-preset-minify": "^0.5.1",
     "core-js": "3",
     "esm": "^3.2.25",
+    "fxjs2": "^0.15.0",
     "mocha": "^7.0.1"
   }
 }
