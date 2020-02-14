@@ -10,6 +10,9 @@ export class LinkedList extends Map {
       yield currNode
     }
   }
+  find(el){
+    return this.get(el)
+  }
 }
 
 

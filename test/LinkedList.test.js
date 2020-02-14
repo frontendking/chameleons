@@ -6,4 +6,11 @@ describe('LinkedList', () => {
   beforeEach(()=>{
     llist = new LinkedList()
   })
+  it('find', ()=>{
+    llist = new LinkedList(1,2,3)
+    assert.deepEqual(llist.find(2),2)
+  })
+  it('insert', ()=>{
+
+  })
 })
