@@ -15,10 +15,10 @@ describe('LinkedList', () => {
     const res = llist.insert(newItem, 2)
     // assert.deepEqual([...res], [1,2,newItem,3])
   })
-/*  it('remove', ()=>{
+  it.only('remove', ()=>{
     llist = new LinkedList(1,2,3)
     const res = llist.insert(item,1).remove(item)
+    console.log(...res)
     assert.deepEqual([...res], [1,2,3])
-
-  })*/
+  })
 })
