@@ -1,4 +1,4 @@
-import { LinkedList } from '../src/LinkedList'
+import l from '../src/LinkedList'
 import { strict as assert } from 'assert'
 
 describe('LinkedList', () => {
