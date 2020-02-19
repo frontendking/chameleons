@@ -1,4 +1,4 @@
-import l from '../src/LinkedList'
+import LinkedList from '../src/LinkedList'
 import { strict as assert } from 'assert'
 
 describe('LinkedList', () => {
@@ -19,5 +19,12 @@ describe('LinkedList', () => {
     llist = new LinkedList(1,2,3)
     const res = llist.insert(item,1).remove(item)
     assert.deepEqual([...res], [1,2,3])
+  })
+  it('reverse', ()=>{
+    llist=new LinkedList(1,2,3)
+    llist.reverse()
+    assert.deepEqual([...llist], [3,2,1])
+    llist.reverse()
+    assert.deepEqual([...llist], [1,2,3])
   })
 })

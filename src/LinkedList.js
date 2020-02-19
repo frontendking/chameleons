@@ -17,7 +17,7 @@ export default class LinkedList extends Map {
   }
 
   reverse () {
-    this.#isReverse = true
+    this.#isReverse = !this.#isReverse
   }
 
   * [Symbol.iterator] () {
