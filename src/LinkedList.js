@@ -2,6 +2,7 @@ export class LinkedList extends Map {
   #reverseList = new Map()
   #isReverse = false
   #isCircular = false
+  #current = null
 
   constructor (...args) {
     super([[null, undefined]])
@@ -31,10 +32,11 @@ export class LinkedList extends Map {
     return this.#isCircular
   }
 
-  insert (newEl, prevEl = null) {
+  insert (newEl, prevEl=this.#current) {
     const nextOfPrev = this.get(prevEl)
     this.set(prevEl, newEl).set(newEl, nextOfPrev)
     this.#reverseList.set(newEl, prevEl).set(nextOfPrev, newEl)
+    this.#current = newEl
     return this
   }
 
