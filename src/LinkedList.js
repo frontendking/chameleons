@@ -60,6 +60,7 @@ export class LinkedList extends Map {
     this.#reverseList.set(nextOfItem, prevOfItem)
     this.delete(item)
     this.#reverseList.delete(item)
+    this.#current = this.#reverseList.get(undefined)
     return this
   }
 }
