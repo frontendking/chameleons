@@ -11,7 +11,7 @@ describe.only('LinkedList', () => {
   it('insert', () => {
     llist = new LinkedList(1, 2, 3)
     console.log(llist)
-    const newItem = item
+    const newItem = itemt
     const res = llist.insert(newItem, 2)
     assert.deepEqual([...res], [1, 2, newItem, 3])
   })
