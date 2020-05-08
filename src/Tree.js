@@ -4,10 +4,11 @@ export class Tree extends LinkedList {
   #rightLinked = new LinkedList()
   #current = null
 
-  insert1 (value) {
-    super.insert(value)
-    if(super.get(null)<value){
-      super.remove(value)
+  insert (value) {
+    const root = super.get(null)
+    if(root===undefined||root>value){
+      super.insert(value)
+    }else {
       this.#rightLinked.insert(value)
     }
   }
