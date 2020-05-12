@@ -12,14 +12,12 @@ export class Tree extends LinkedList {
 
       while(true){
         if(value<root){
-          root=super.get(value)
-          if(root===undefined){
+          if(super.get(root)===undefined){
             super.set(root, value)
             break
           }
         }else {
-          root=this.#rightLinked.get(value)
-          if(root===undefined){
+          if(this.#rightLinked.get(root)===undefined){
             this.#rightLinked.set(root, value)
             break
           }
