@@ -1,3 +1,5 @@
+const a = 1
+
 export class List extends Array {
   #currIndex = 0
   get currIndex () {
@@ -29,9 +31,10 @@ export class List extends Array {
     return this
   }
 
-  getElement(){
+  getElement () {
     return this[this.#currIndex]
   }
+
   append (...el) {
     this.push(...el)
     return this
@@ -60,9 +63,10 @@ export class List extends Array {
       return this
     }
   }
-  *[Symbol.iterator](){
+
+  * [Symbol.iterator] () {
     let memo = this.#currIndex
-    while(this.#currIndex<this.length){
+    while (this.#currIndex < this.length) {
       yield this[this.#currIndex]
       this.#currIndex++
     }

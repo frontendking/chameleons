@@ -1,5 +1,5 @@
-import { Stack } from '../src/Stack'
 import { strict as assert } from 'assert'
+import { Stack } from '../src/Stack'
 
 describe('Stack', () => {
   let stack
@@ -13,14 +13,14 @@ describe('Stack', () => {
     })
     it('pop', () => {
       stack = new Stack(1, 2, 3)
-      assert.deepEqual(stack.pop(), new Stack(1,2))
+      assert.deepEqual(stack.pop(), new Stack(1, 2))
     })
     it('peek', () => {
       stack = new Stack(1, 2, 3)
       assert.deepEqual(stack.peek(), 3)
     })
-    it('clear', ()=>{
-      stack = new Stack(1,2,3)
+    it('clear', () => {
+      stack = new Stack(1, 2, 3)
       assert.deepEqual(stack.clear(), new Stack())
     })
   })

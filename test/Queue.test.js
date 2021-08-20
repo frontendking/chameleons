@@ -1,5 +1,5 @@
-import { Queue } from '../src'
 import { strict as assert } from 'assert'
+import { Queue } from '../src'
 
 describe('Queue', () => {
   let queue

@@ -2,20 +2,12 @@ export class LinkedList extends Map {
   #reverseList = new Map()
   #isReverse = false
   #isCircular = false
+  #current = null
 
   constructor (...args) {
     super([[null, undefined]])
     for (let [k, v] of args.entries()) {
       this.insert(v, args[k - 1])
-    }
-  }
-
-  * [Symbol.iterator] () {
-    let [currNode, listType] = this.#isReverse
-      ? [undefined, this.#reverseList]
-      : [null, this]
-    while (currNode = listType.get(currNode)) {
-      yield currNode
     }
   }
 
@@ -31,6 +23,15 @@ export class LinkedList extends Map {
     return this.#isCircular
   }
 
+  * [Symbol.iterator] () {
+    let [currNode, listType] = this.#isReverse
+      ? [undefined, this.#reverseList]
+      : [null, this]
+    while (currNode = listType.get(currNode)) {
+      yield currNode
+    }
+  }
+
   insert (newEl, prevEl = null) {
     const nextOfPrev = this.get(prevEl)
     this.set(prevEl, newEl).set(newEl, nextOfPrev)
@@ -44,7 +45,7 @@ export class LinkedList extends Map {
   }
 
   toggleCirculation () {
-    if(this.#isCircular = !this.#isCircular) {
+    if (this.#isCircular = !this.#isCircular) {
       const lastEl = this.#reverseList.get(undefined)
       const firstEl = this.get(null)
       this.set(lastEl, firstEl)

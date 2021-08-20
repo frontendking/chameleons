@@ -1,21 +1,25 @@
 export class Queue extends Array {
-  enqueue(...args){
+  enqueue (...args) {
     args.reverse()
     this.unshift(...args)
     return this
   }
-  dequeue(){
+
+  dequeue () {
     this.pop()
     return this
   }
-  empty(){
+
+  empty () {
     this.length = 0
     return this
   }
-  front(){
+
+  front () {
     return this[0]
   }
-  back(){
-    return this[this.length-1]
+
+  back () {
+    return this[this.length - 1]
   }
 }

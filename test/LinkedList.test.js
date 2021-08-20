@@ -1,7 +1,7 @@
-import { LinkedList } from '../src/LinkedList'
 import { strict as assert } from 'assert'
+import { LinkedList } from '../src/LinkedList'
 
-describe.only('LinkedList', () => {
+describe('LinkedList', () => {
   let llist
   let item
   beforeEach(() => {

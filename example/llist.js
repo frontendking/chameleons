@@ -1,4 +1,5 @@
-import {LinkedList} from '../src/LinkedList'
+import { LinkedList } from '../src/LinkedList'
+
 const cities = new LinkedList()
 cities.insert('Conway')
 cities.insert('Russellvile', 'Conway')
