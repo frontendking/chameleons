@@ -33,7 +33,19 @@ export class BST {
     return this.root
   };
 
-  read () {
-    return this.root
+  read (strategy) {
+    return strategy(this.root)
   }
+}
+
+export function inOrder(node){
+  const res = []
+  function _inOrder(node){
+    if(!node) return
+    _inOrder(node.left)
+    res.push(node.value)
+    _inOrder(node.right)
+  }
+  _inOrder(node)
+  return res
 }
